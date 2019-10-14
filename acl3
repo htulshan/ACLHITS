@@ -1,0 +1,166 @@
+    10 permit ip any any
+    20 permit ip any host 1.1.1.1
+    30 permit ip any 1.0.0.0 0.0.0.255
+    40 permit ip host 2.2.2.2 any
+    50 permit ip host 2.2.2.2 host 1.1.1.1
+    60 permit ip host 2.2.2.2 1.0.0.0 0.0.0.255
+    70 permit ip 2.2.0.0 0.0.255.255 1.0.0.0 0.0.0.255
+    80 permit ip 2.2.0.0 0.0.255.255 any
+    90 permit ip 2.2.0.0 0.0.255.255 host 1.1.1.1
+    100 permit tcp any any
+    110 permit tcp any eq ftp-data any
+    120 permit tcp any any eq 10
+    130 permit tcp any eq ftp-data any eq 10
+    140 permit tcp any host 1.1.1.1
+    150 permit tcp any eq ftp-data host 1.1.1.1
+    160 permit tcp any host 1.1.1.1 eq 10
+    170 permit tcp any eq ftp-data host 1.1.1.1 eq 10
+    180 permit tcp any 1.0.0.0 0.0.0.255
+    190 permit tcp any eq ftp-data 1.0.0.0 0.0.0.255
+    200 permit tcp any 1.0.0.0 0.0.0.255 eq 10
+    210 permit tcp any eq ftp-data 1.0.0.0 0.0.0.255 eq 10
+    220 permit tcp host 2.2.2.2 any
+    230 permit tcp host 2.2.2.2 eq ftp-data any
+    240 permit tcp host 2.2.2.2 any eq 10
+    250 permit tcp host 2.2.2.2 eq ftp-data any eq 10
+    260 permit tcp host 2.2.2.2 host 1.1.1.1
+    270 permit tcp host 2.2.2.2 eq ftp-data host 1.1.1.1 eq 10
+    280 permit tcp host 2.2.2.2 host 1.1.1.1 eq 10
+    290 permit tcp host 2.2.2.2 eq ftp-data host 1.1.1.1
+    300 permit tcp host 2.2.2.2 1.0.0.0 0.0.0.255
+    310 permit tcp host 2.2.2.2 eq ftp-data 1.0.0.0 0.0.0.255
+    320 permit tcp host 2.2.2.2 1.0.0.0 0.0.0.255 eq 10
+    330 permit tcp host 2.2.2.2 eq ftp-data 1.0.0.0 0.0.0.255 eq 10
+    340 permit tcp 2.2.0.0 0.0.255.255 1.0.0.0 0.0.0.255
+    350 permit tcp 2.2.0.0 0.0.255.255 eq ftp-data 1.0.0.0 0.0.0.255 eq 10
+    360 permit tcp 2.2.0.0 0.0.255.255 1.0.0.0 0.0.0.255 eq 10
+    370 permit tcp 2.2.0.0 0.0.255.255 eq ftp-data 1.0.0.0 0.0.0.255
+    380 permit tcp 2.2.0.0 0.0.255.255 any
+    390 permit tcp 2.2.0.0 0.0.255.255 any eq 10
+    400 permit tcp 2.2.0.0 0.0.255.255 eq ftp-data any eq 10
+    410 permit tcp 2.2.0.0 0.0.255.255 eq ftp-data any
+    420 permit tcp 2.2.0.0 0.0.255.255 host 1.1.1.1
+    430 permit tcp 2.2.0.0 0.0.255.255 host 1.1.1.1 eq 10
+    440 permit tcp 2.2.0.0 0.0.255.255 eq ftp-data host 1.1.1.1 eq 10
+    450 permit tcp 2.2.0.0 0.0.255.255 eq ftp-data host 1.1.1.1
+   460 permit tcp any any
+   470 permit tcp any lt ftp-data any
+   480 permit tcp any any lt 10
+   490 permit tcp any lt ftp-data any lt 10
+   500 permit tcp any host 1.1.1.1
+   510 permit tcp any lt ftp-data host 1.1.1.1
+   520 permit tcp any host 1.1.1.1 lt 10
+   530 permit tcp any lt ftp-data host 1.1.1.1 lt 10
+   540 permit tcp any 1.0.0.0 0.0.0.255
+   550 permit tcp any lt ftp-data 1.0.0.0 0.0.0.255
+   560 permit tcp any 1.0.0.0 0.0.0.255 lt 10
+   570 permit tcp any lt ftp-data 1.0.0.0 0.0.0.255 lt 10
+   580 permit tcp host 2.2.2.2 any
+   590 permit tcp host 2.2.2.2 lt ftp-data any
+   600 permit tcp host 2.2.2.2 any lt 10
+   610 permit tcp host 2.2.2.2 lt ftp-data any lt 10
+   620 permit tcp host 2.2.2.2 host 1.1.1.1
+   630 permit tcp host 2.2.2.2 lt ftp-data host 1.1.1.1 lt 10
+   640 permit tcp host 2.2.2.2 host 1.1.1.1 lt 10
+   650 permit tcp host 2.2.2.2 lt ftp-data host 1.1.1.1
+   660 permit tcp host 2.2.2.2 1.0.0.0 0.0.0.255
+   670 permit tcp host 2.2.2.2 lt ftp-data 1.0.0.0 0.0.0.255
+   680 permit tcp host 2.2.2.2 1.0.0.0 0.0.0.255 lt 10
+   690 permit tcp host 2.2.2.2 lt ftp-data 1.0.0.0 0.0.0.255 lt 10
+   700 permit tcp 2.2.0.0 0.0.255.255 1.0.0.0 0.0.0.255
+   710 permit tcp 2.2.0.0 0.0.255.255 lt ftp-data 1.0.0.0 0.0.0.255 lt 10
+   720 permit tcp 2.2.0.0 0.0.255.255 1.0.0.0 0.0.0.255 lt 10
+   730 permit tcp 2.2.0.0 0.0.255.255 lt ftp-data 1.0.0.0 0.0.0.255
+   740 permit tcp 2.2.0.0 0.0.255.255 any
+   750 permit tcp 2.2.0.0 0.0.255.255 any lt 10
+   760 permit tcp 2.2.0.0 0.0.255.255 lt ftp-data any lt 10
+   770 permit tcp 2.2.0.0 0.0.255.255 lt ftp-data any
+   780 permit tcp 2.2.0.0 0.0.255.255 host 1.1.1.1
+   790 permit tcp 2.2.0.0 0.0.255.255 host 1.1.1.1 lt 10
+   800 permit tcp 2.2.0.0 0.0.255.255 lt ftp-data host 1.1.1.1 lt 10
+   810 permit tcp 2.2.0.0 0.0.255.255 lt ftp-data host 1.1.1.1
+   820 permit tcp any any
+   830 permit tcp any gt ftp-data any
+   840 permit tcp any any gt 10
+   850 permit tcp any gt ftp-data any gt 10
+   860 permit tcp any host 1.1.1.1
+   870 permit tcp any gt ftp-data host 1.1.1.1
+   880 permit tcp any host 1.1.1.1 gt 10
+   890 permit tcp any gt ftp-data host 1.1.1.1 gt 10
+   900 permit tcp any 1.0.0.0 0.0.0.255
+   910 permit tcp any gt ftp-data 1.0.0.0 0.0.0.255
+   920 permit tcp any 1.0.0.0 0.0.0.255 gt 10
+   930 permit tcp any gt ftp-data 1.0.0.0 0.0.0.255 gt 10
+   940 permit tcp host 2.2.2.2 any
+   950 permit tcp host 2.2.2.2 gt ftp-data any
+   960 permit tcp host 2.2.2.2 any gt 10
+   970 permit tcp host 2.2.2.2 gt ftp-data any gt 10
+   980 permit tcp host 2.2.2.2 host 1.1.1.1
+   990 permit tcp host 2.2.2.2 gt ftp-data host 1.1.1.1 gt 10
+   1000 permit tcp host 2.2.2.2 host 1.1.1.1 gt 10
+   1010 permit tcp host 2.2.2.2 gt ftp-data host 1.1.1.1
+   1020 permit tcp host 2.2.2.2 1.0.0.0 0.0.0.255
+   1030 permit tcp host 2.2.2.2 gt ftp-data 1.0.0.0 0.0.0.255
+   1040 permit tcp host 2.2.2.2 1.0.0.0 0.0.0.255 gt 10
+   1050 permit tcp host 2.2.2.2 gt ftp-data 1.0.0.0 0.0.0.255 gt 10
+   1060 permit tcp 2.2.0.0 0.0.255.255 1.0.0.0 0.0.0.255
+   1070 permit tcp 2.2.0.0 0.0.255.255 gt ftp-data 1.0.0.0 0.0.0.255 gt 10
+   1080 permit tcp 2.2.0.0 0.0.255.255 1.0.0.0 0.0.0.255 gt 10
+   1090 permit tcp 2.2.0.0 0.0.255.255 gt ftp-data 1.0.0.0 0.0.0.255
+   1100 permit tcp 2.2.0.0 0.0.255.255 any
+   1110 permit tcp 2.2.0.0 0.0.255.255 any gt 10
+   1120 permit tcp 2.2.0.0 0.0.255.255 gt ftp-data any gt 10
+   1130 permit tcp 2.2.0.0 0.0.255.255 gt ftp-data any
+   1140 permit tcp 2.2.0.0 0.0.255.255 host 1.1.1.1
+   1150 permit tcp 2.2.0.0 0.0.255.255 host 1.1.1.1 gt 10
+   1160 permit tcp 2.2.0.0 0.0.255.255 gt ftp-data host 1.1.1.1 gt 10
+   1170 permit tcp 2.2.0.0 0.0.255.255 gt ftp-data host 1.1.1.1
+   1180 permit ip any any
+    1190 permit ip any host 1.1.1.1
+    1200 permit ip any 1.0.0.0 0.0.0.255
+    1210 permit ip host 2.2.2.2 any
+    1220 permit ip host 2.2.2.2 host 1.1.1.1
+    1230 permit ip host 2.2.2.2 1.0.0.0 0.0.0.255
+    1240 permit ip 2.2.0.0 0.0.255.255 1.0.0.0 0.0.0.255
+    1250 permit ip 2.2.0.0 0.0.255.255 any
+    1260 permit ip 2.2.0.0 0.0.255.255 host 1.1.1.1
+    1270 permit tcp any any
+    1280 permit tcp any range ftp-data 500 any
+    1290 permit tcp any any range 10 600
+    1300 permit tcp any range ftp-data 500 any range 10 600
+    1310 permit tcp any host 1.1.1.1
+    1320 permit tcp any range ftp-data 500 host 1.1.1.1
+    1330 permit tcp any host 1.1.1.1 range 10 600
+    1340 permit tcp any range ftp-data 500 host 1.1.1.1 range 10 600
+    1350 permit tcp any 1.0.0.0 0.0.0.255
+    1360 permit tcp any range ftp-data 500 1.0.0.0 0.0.0.255
+    1370 permit tcp any 1.0.0.0 0.0.0.255 range 10 600
+    1380 permit tcp any range ftp-data 500 1.0.0.0 0.0.0.255 range 10 600
+    1390 permit tcp host 2.2.2.2 any
+    1400 permit tcp host 2.2.2.2 range ftp-data 500 any
+    1410 permit tcp host 2.2.2.2 any range 10 600
+    1420 permit tcp host 2.2.2.2 range ftp-data 500 any range 10 600
+    1430 permit tcp host 2.2.2.2 host 1.1.1.1
+    1440 permit tcp host 2.2.2.2 range ftp-data 500 host 1.1.1.1 range 10 600
+    1450 permit tcp host 2.2.2.2 host 1.1.1.1 range 10 600
+    1460 permit tcp host 2.2.2.2 range ftp-data 500 host 1.1.1.1
+    1470 permit tcp host 2.2.2.2 1.0.0.0 0.0.0.255
+    1480 permit tcp host 2.2.2.2 range ftp-data 500 1.0.0.0 0.0.0.255
+    1490 permit tcp host 2.2.2.2 1.0.0.0 0.0.0.255 range 10 600
+    1500 permit tcp host 2.2.2.2 range ftp-data 500 1.0.0.0 0.0.0.255 range 10 600
+    1510 permit tcp 2.2.0.0 0.0.255.255 1.0.0.0 0.0.0.255
+    1520 permit tcp 2.2.0.0 0.0.255.255 range ftp-data 500 1.0.0.0 0.0.0.255 range 10 600
+    1530 permit tcp 2.2.0.0 0.0.255.255 1.0.0.0 0.0.0.255 range 10 600
+    1540 permit tcp 2.2.0.0 0.0.255.255 range ftp-data 500 1.0.0.0 0.0.0.255
+    1550 permit tcp 2.2.0.0 0.0.255.255 any
+    1560 permit tcp 2.2.0.0 0.0.255.255 any range 10 600
+    1570 permit tcp 2.2.0.0 0.0.255.255 range ftp-data 500 any range 10 600
+    1580 permit tcp 2.2.0.0 0.0.255.255 range ftp-data 500 any
+    1590 permit tcp 2.2.0.0 0.0.255.255 host 1.1.1.1
+    1600 permit tcp 2.2.0.0 0.0.255.255 host 1.1.1.1 range 10 600
+    1610 permit tcp 2.2.0.0 0.0.255.255 range ftp-data 500 host 1.1.1.1 range 10 600
+    1620 permit tcp 2.2.0.0 0.0.255.255 range ftp-data 500 host 1.1.1.1
+    1630 permit tcp host 2.2.2.2 eq 10 15 host 1.1.1.1
+    1640 permit tcp host 2.2.2.2 host 1.1.1.1 eq 10 15
+    1650 permit tcp host 2.2.2.2 eq ftp-data 500 host 1.1.1.1
+    1660 permit tcp host 2.2.2.2 host 1.1.1.1 eq ftp-data 500
